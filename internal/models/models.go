@@ -15,6 +15,7 @@ type Notification struct {
 	ScheduledAt time.Time `json:"scheduled_at"`
 	Status      string    `json:"status"`
 	CreatedAt   time.Time `json:"created_at"`
+	RetryCount  int       `json:"RetryCount"`
 }
 
 func NewNotification(userID, title, message, chatID string, scheduledAt time.Time) *Notification {
